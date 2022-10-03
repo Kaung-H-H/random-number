@@ -72,10 +72,13 @@
         #mainValue,#mainValue2{
             font-weight: bold;
         }
-        #error{
+        #error,#error2{
             font-size: 15px;
             color: red;
             font-weight: bold;
+        }
+        label{
+            font-size: 20px;
         }
         .button:active {
         background-color: brown;
@@ -88,9 +91,13 @@
 </head>
 <body>
     <div>
-    <p id="head">Choose number of length</p>
-    <p id="error" style="visibility:hidden;">!!The max number must be 20</p>
-    <input type="number" id="myText" value="1" min="1" max="20" style="display:block;"><br>
+    <p id="head">Random Number Generator</p>
+    <p id="error" style="visibility: hidden;">Error</p>
+    
+
+    <form>
+    <label for="length" style="font-weight: bold;">Choose length of number</label><br><br>
+    <input type="number" id="myText" value="1" min="1" max="20" style="display:block;"></form><br>
     <p style="display:inline;" class="text">Min Number :</p> <p id="minValue" style="display:inline;"></p><br>
     <p style="display: inline;" class="text">Max Number :</p> <p id="maxValue" style="display: inline;"></p><br><br>
     <p style="display: inline;" id="mainValue2">Generated Number :</p> <p id="mainValue" style="display: inline;"></p><br><br>
