@@ -1,110 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="index.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Random Number Generator</title>
+        <script src="index.js"></script>
 
-    <style>
-        #head{
-            font-size: 40px;
-            color: black;
+        <style>
+            #head{
+                font-size: 40px;
+                color: black;
+            }
+            input{
+                line-height: 28px;
+                width: 10%;
+            }
+            p{
+                font-size: 25px;
+                font-style: bold;
+                color: blue;
+            }
+            body{
+                position: relative;
+                height: 200vh;
+            }
+            div{
+                position: absolute;
+                left: 30%;
+                width: 600px;
+                height: 500px;
+                margin-top: 150px;
+                border: 1px solid black;
+                text-align: center;
+            }
+            input{
+                position: relative;
+                width: 25%;
+                color: red;
+                font-weight: bold;
+                font-size: large;
+                border-color: red;
+                left: 37%;
+            }
+            .button {
+                padding: 10px 20px;
+                font-size: 15px;
+                text-align: center;
+                cursor: pointer;
+                outline: none;
+                color: black;
+                background-color: red;
+                border: none;
+                font-weight: bold;
+                box-shadow: 0 5px #999;
+                border-radius: 10px;
+            }
+            #minValue,#maxValue,.text{
+                font-size: 18px;
+                font-weight: bold;
+                color: black;
+            }
+            #mainValue,#generateNumberLabel{
+                font-weight: bold;
+            }
+            #error{
+                font-size: 15px;
+                color: red;
+                font-weight: bold;
+            }
+            label{
+                font-size: 20px;
+            }
+            .button:active {
+            background-color: brown;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+            }
+        </style>
 
-        }
-        input{
-            
-            line-height: 28px;
-            width: 10%;
-        }
-
-        p{
-            font-size: 25px;
-            font-style: bold;
-            color: blue;
-        }
-        body{
-            position: relative;
-            height: 200vh;
-        }
-        div{
-            position: absolute;
-            left: 30%;
-            width: 600px;
-            height: 500px;
-            margin-top: 150px;
-            border: 1px solid black;
-            text-align: center;
-            
-        }
-        input{
-            position: relative;
-            width: 25%;
-            color: red;
-            font-weight: bold;
-            font-size: large;
-            border-color: red;
-            left: 37%;
-           
-            
-        }
-        .button {
-            padding: 10px 20px;
-            font-size: 15px;
-            text-align: center;
-            cursor: pointer;
-            outline: none;
-            color: black;
-            background-color: red;
-            border: none;
-            font-weight: bold;
-            box-shadow: 0 5px #999;
-            border-radius: 10px;
-
-}
-        #minValue,#maxValue,.text{
-            font-size: 18px;
-            font-weight: bold;
-            color: black;
-
-        }
-        #mainValue,#mainValue2{
-            font-weight: bold;
-        }
-        #error,#error2{
-            font-size: 15px;
-            color: red;
-            font-weight: bold;
-        }
-        label{
-            font-size: 20px;
-        }
-        .button:active {
-        background-color: brown;
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
-}
-
-    </style>
-
-</head>
-<body>
-    <div>
-    <p id="head">Random Number Generator</p>
-    <p id="error" style="visibility: hidden;">Error</p>
-    
-
-    <form>
-    <label for="length" style="font-weight: bold;">Choose length of number</label><br><br>
-    <input type="number" id="myText" value="1" min="1" max="20" style="display:block;"></form><br>
-    <p style="display:inline;" class="text">Min Number :</p> <p id="minValue" style="display:inline;"></p><br>
-    <p style="display: inline;" class="text">Max Number :</p> <p id="maxValue" style="display: inline;"></p><br><br>
-    <p style="display: inline;" id="mainValue2">Generated Number :</p> <p id="mainValue" style="display: inline;"></p><br><br>
-    
-    <button onclick="myFunction()" class="button">Generate</button></div>
+    </head>
+    <body>
+        <div>
+        <p id="head">Random Number Generator</p>
+        <p id="error" style="visibility: hidden;">Error</p>
         
-    
-    
+        <form>
+        <label for="length" style="font-weight: bold;">Choose length of number</label><br><br>
+        <input type="number" id="myText" value="1" min="1" max="20" style="display:block;"></form><br>
+        
+        <p style="display:inline;" class="text">Min Number :</p> <p id="minValue" style="display:inline;"></p><br>
+        <p style="display: inline;" class="text">Max Number :</p> <p id="maxValue" style="display: inline;"></p><br><br>
+        <p style="display: inline;" id="generateNumberLabel">Generated Number :</p> <p id="mainValue" style="display: inline;"></p><br><br>
+        
+        <button onclick="myFunction()" class="button">Generate</button></div>
     </body>
 </html>
